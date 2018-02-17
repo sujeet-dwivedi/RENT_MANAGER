@@ -63,12 +63,20 @@ public class LoginController {
 		return model;
 	}
 
-
+/**
+ * logout
+ * @return
+ */
 	@RequestMapping(value = "/logout",method = RequestMethod.GET)
 	public String logout() {
 		return "redirect:/";
 	}
 
+	/**
+	 * redirect to home page
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping(value = "/home",method = RequestMethod.GET)
 	public String home(ModelMap model) {
 		model.addAttribute("renters", renterService.findAll());
