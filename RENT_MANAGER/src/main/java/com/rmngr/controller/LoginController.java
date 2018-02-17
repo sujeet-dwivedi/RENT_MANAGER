@@ -33,12 +33,22 @@ public class LoginController {
 	@Autowired
 	private UserService userService;
 
+	/**
+	 * Initial Request to open Login Page
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping(method = RequestMethod.GET)
 	public String welcomePage(ModelMap model) {
 		model.addAttribute("loginForm", new User());
 		return "welcome";
 	}
 
+	/**
+	 * Validate user and Switch to dashboard with All Renters list
+	 * @param user
+	 * @return
+	 */
 	@RequestMapping(value = "/login",method = RequestMethod.POST)
 	public ModelAndView login(@ModelAttribute("user")User user) {
 		ModelAndView model = new ModelAndView();
