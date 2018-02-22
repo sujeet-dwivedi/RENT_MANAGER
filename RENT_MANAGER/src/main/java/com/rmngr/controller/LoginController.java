@@ -64,7 +64,7 @@ public class LoginController {
 	}
 
 /**
- * logout controller
+ * logout controller 
  * @return
  */
 	@RequestMapping(value = "/logout",method = RequestMethod.GET)
