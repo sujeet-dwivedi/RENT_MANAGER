@@ -46,4 +46,9 @@ public class RenterServiceImpl implements RenterService{
 		return renterDao.findAll();
 	}
 
+	@Override
+	public boolean isRoomExists(int renterId) {
+		return renterDao.isRoomExists(renterId);
+	}
+
 }

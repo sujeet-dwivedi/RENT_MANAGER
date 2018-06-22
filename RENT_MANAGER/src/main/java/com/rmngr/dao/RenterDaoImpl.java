@@ -19,8 +19,8 @@ public class RenterDaoImpl implements RenterDao{
 
 	@Override
 	public void addRenter(Renter renter) {
-		jdbcTemplate.update("INSERT INTO renter_details VALUES (auto_encrement.NEXTVAL, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?)",
-				renter.getFirstName(),renter.getLastName(),renter.getEmailId(),renter.getDob(),renter.getAadhaarNo(),renter.getPhone(),renter.getAddress(),renter.getPincode(),renter.getCity(),renter.getState());
+		jdbcTemplate.update("INSERT INTO renter_details VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?)",
+				renter.getRenterId(),renter.getFirstName(),renter.getLastName(),renter.getEmailId(),renter.getDob(),renter.getAadhaarNo(),renter.getPhone(),renter.getAddress(),renter.getPincode(),renter.getCity(),renter.getState());
 		System.out.println("Renter Saved!!");
 	}
 
@@ -49,6 +49,22 @@ public class RenterDaoImpl implements RenterDao{
 	public List<Renter> findAll() {
 		List < Renter > renter = jdbcTemplate.query("SELECT * FROM renter_details", new BeanPropertyRowMapper(Renter.class));
 		return renter;
+	}
+
+	@Override
+	public boolean isRoomExists(int renterId) {
+
+		String sql = "SELECT count(*) FROM renter_details WHERE renterId = ?";
+		boolean result = false;
+
+		int count = jdbcTemplate.queryForObject(
+				sql, new Object[] { renterId }, Integer.class);
+
+		if (count > 0) {
+			result = true;
+		}
+
+		return result;
 	}
 
 }

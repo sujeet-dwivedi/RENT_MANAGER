@@ -1,7 +1,7 @@
 package com.rmngr.bean;
 
 public class Renter {
-	
+
 	private int renterId;
 	private String firstName;
 	private String lastName;
@@ -13,7 +13,7 @@ public class Renter {
 	private int pincode;
 	private String city;
 	private String state;
-	
+
 	public Renter() {
 		super();
 	}
@@ -33,7 +33,6 @@ public class Renter {
 		this.city = city;
 		this.state = state;
 	}
-
 
 
 	public int getRenterId() {
@@ -123,9 +122,9 @@ public class Renter {
 	public void setState(String state) {
 		this.state = state;
 	}
-	
-	
-	
-	
+
+
+
+
 
 }

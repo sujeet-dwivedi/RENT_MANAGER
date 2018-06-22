@@ -5,6 +5,7 @@
 <script src="resources/vendor/jquery.min.js"></script>
 <script src="resources/js/bootstrap.min.js"></script>
 <script src="resources/js/bootstrap-select.js"></script>
+<script type="text/javascript" src="resources/utility/utility.js"></script>
 <title></title>
 </head>
 <spring:url value="/home" var="urlHome" />

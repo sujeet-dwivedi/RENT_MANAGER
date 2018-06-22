@@ -16,4 +16,6 @@ public interface RenterService {
 	public Renter find(int renterId);
 
 	public List < Renter > findAll();
+	
+	public boolean isRoomExists(int renterId);
 }
