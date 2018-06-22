@@ -5,21 +5,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Insert title here</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Renter Form</title>
 </head>
 <jsp:include page="./fragments/header.jsp" />
 <body>
 
 	<div class="container">
-
-		<%-- <c:choose>
-		<c:when test="${userForm['new']}"> --%>
 		<h1>Add Renter</h1>
-		<%-- </c:when>
-		<c:otherwise>
-			<h1>Update User</h1>
-		</c:otherwise>
-	</c:choose>  --%>
 		<br />
 
 		<spring:url value="/saveRenter" var="userActionUrl" />
@@ -27,8 +20,13 @@
 		<form:form class="form-horizontal" method="post"
 			modelAttribute="renterForm" action="${userActionUrl}">
 
-			<form:hidden path="renterId" />
-
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Room No.</label>
+				<div class="col-sm-10">
+					<form:input path="renterId" type="text" class="form-control "
+						id="renterId" placeholder="roomNo" />
+				</div>
+			</div>
 			<div class="form-group">
 				<label class="col-sm-2 control-label">First Name</label>
 				<div class="col-sm-10">
@@ -104,14 +102,7 @@
 
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
-					<%-- 				<c:choose>
-					<c:when test="${userForm['new']}"> --%>
 					<button type="submit" class="btn-lg btn-primary pull-right">Add</button>
-					<%-- 					</c:when>
-					<c:otherwise>
-						<button type="submit" class="btn-lg btn-primary pull-right">Update</button>
-					</c:otherwise>
-				</c:choose> --%>
 				</div>
 			</div>
 		</form:form>

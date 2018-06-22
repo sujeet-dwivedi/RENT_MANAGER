@@ -5,11 +5,17 @@ com\rmngr\service\RenterService.class
 com\rmngr\bean\Renter.class
 com\rmngr\configuration\AppConfig.class
 com\rmngr\initializer\AppInitializer.class
+com\rmngr\controller\RentController.class
 com\rmngr\controller\RenterController.class
 com\rmngr\dao\RenterDaoImpl.class
+com\rmngr\dao\RentPayDaoImpl.class
 com\rmngr\service\UserService.class
+com\rmngr\service\RentPayService.class
 com\rmngr\dao\UserDaoImpl.class
+com\rmngr\service\RentPayServiceImpl.class
+com\rmngr\bean\Rent_Payment.class
 com\rmngr\bean\User.class
 com\rmngr\service\RenterServiceImpl.class
 com\rmngr\service\UserServiceImpl.class
+com\rmngr\dao\RentPayDao.class
 com\rmngr\controller\LoginController.class
