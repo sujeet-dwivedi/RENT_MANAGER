@@ -1,0 +1,6 @@
+npm install -g @angular/cli@latest
+ng new dynamic-form
+cd dynamic-form
+ng add @angular/material @angular/cdk
+npm install --save @angular/material-moment-adapter moment
+ng generate module material --flat
